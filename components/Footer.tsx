@@ -19,10 +19,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 bg-forest rounded-full flex items-center justify-center">
-                <span className="text-white font-display font-semibold text-sm">G</span>
-              </div>
-              <span className="font-display text-xl font-semibold text-mist">EatTrainTransform</span>
+              <img
+                src="/logo.png"
+                alt="Eat Train Transform"
+                className="h-10 w-auto object-contain rounded-full"
+              />
             </div>
             <p className="text-sm leading-relaxed text-mist/45 max-w-xs">
               Personalised nutrition and dietitian services by Gowthami Sukumaran — helping you transform through food, not despite it.

@@ -8,7 +8,7 @@ const services = [
     icon: Salad,
     title: 'Personalised Nutrition Plans',
     description:
-      'Custom diet plans built around your lifestyle, food preferences, and health goals — including Indian cuisine, regional foods, and traditional eating patterns.',
+      'Custom diet plans built around your lifestyle, food preferences, and health goals - including Indian cuisine, regional foods, and traditional eating patterns.',
     highlights: ['Blood report review', 'Indian meal planning', 'Weekly plan updates', 'Supplement guidance'],
     color: 'from-forest/10 to-forest/5',
     iconBg: 'bg-forest/15 dark:bg-forest/20',
@@ -18,7 +18,7 @@ const services = [
     icon: HeartPulse,
     title: 'Weight Management',
     description:
-      'Sustainable, science-backed weight loss and body composition support — no crash diets, no extreme restrictions. Just practical, lasting results.',
+      'Sustainable, science-backed weight loss and body composition support - no crash diets, no extreme restrictions. Just practical, lasting results.',
     highlights: ['Body composition tracking', 'Metabolic health focus', 'Lifestyle-based approach', 'Long-term habit building'],
     color: 'from-gold/10 to-gold/5',
     iconBg: 'bg-gold/15 dark:bg-gold/15',
@@ -38,7 +38,7 @@ const services = [
     icon: Dumbbell,
     title: "Women's Wellness",
     description:
-      'Specialised nutrition support for women across all life stages — hormonal health, post-pregnancy recovery, PCOS, and overall well-being.',
+      'Specialised nutrition support for women across all life stages - hormonal health, post-pregnancy recovery, PCOS, and overall well-being.',
     highlights: ['Hormone-friendly nutrition', 'Post-pregnancy care', 'PCOS & thyroid support', 'Energy & mood balance'],
     color: 'from-gold/8 to-forest/8',
     iconBg: 'bg-gold/12 dark:bg-gold/12',
@@ -84,7 +84,7 @@ export default function Services() {
             <em className="text-forest dark:text-forest-light">Real Results</em>
           </h2>
           <p className="reveal reveal-delay-2 mt-4 text-lg text-ink/55 dark:text-mist/55 max-w-xl mx-auto leading-relaxed">
-            No cookie-cutter programs. Every service is tailored to you — your body, your schedule, your goals.
+            No cookie-cutter programs. Every service is tailored to you - your body, your schedule, your goals.
           </p>
         </div>
 

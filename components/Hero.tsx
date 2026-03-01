@@ -49,20 +49,17 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="hero-reveal opacity-0 translate-y-8 transition-all duration-700">
-              <span className="block font-display text-display-xl font-light italic text-ink dark:text-mist leading-none mb-2">
-                Transform
+              <span className="block font-display text-display-lg lg:text-display-xl font-light italic text-ink dark:text-mist leading-none mb-2 whitespace-nowrap">
+                Transform Your Body
               </span>
-              <span className="block font-display text-display-xl font-semibold text-forest dark:text-forest-light leading-none mb-2">
-                Your Body.
-              </span>
-              <span className="block font-display text-display-xl font-light italic text-gold dark:text-gold-light leading-none">
-                Elevate Your Life.
+              <span className="block font-display text-display-lg lg:text-display-xl font-semibold text-forest dark:text-forest-light leading-none whitespace-nowrap">
+                Elevate Your Life
               </span>
             </h1>
 
             {/* Sub */}
             <p className="hero-reveal opacity-0 translate-y-8 transition-all duration-700 mt-8 text-lg text-ink/60 dark:text-mist/60 font-light leading-relaxed max-w-md">
-              Personalised nutrition plans and dietitian expertise, built around your body, your food culture, and your goals — by <em>Gowthami Sukumaran</em>.
+              Personalised nutrition plans and dietitian expertise, built around your body, your food culture, and your goals - by <em>Gowthami Sukumaran</em>.
             </p>
 
             {/* CTA Row */}
@@ -105,19 +102,8 @@ export default function Hero() {
               <div className="relative w-80 h-96 lg:w-96 lg:h-[28rem]">
                 {/* Decorative border frame */}
                 <div className="absolute -top-3 -left-3 w-full h-full rounded-5xl border-2 border-forest/20 dark:border-forest/25" />
-                {/* Main card */}
-                <div className="relative w-full h-full rounded-5xl overflow-hidden bg-gradient-to-br from-forest/15 via-surface to-gold/10 dark:from-forest/20 dark:via-night-card dark:to-gold/8 shadow-soft-lg">
-                  {/* Gradient placeholder (replace with <Image> when you have a photo) */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-end p-8">
-                    <div className="w-32 h-32 rounded-full bg-forest/20 dark:bg-forest/30 blob-1 mx-auto mb-6 animate-float" />
-                    <div className="w-full h-32 bg-gradient-to-t from-forest/20 to-transparent rounded-3xl" />
-                  </div>
-                  {/* Silhouette placeholder hint */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-forest/30 dark:text-forest-light/20 font-display text-sm italic text-center px-8">
-                      Replace with your<br />professional photo
-                    </p>
-                  </div>
+                <div className="relative w-full h-full rounded-5xl overflow-hidden shadow-soft-lg">
+                  <img src="/Hero.jpeg" alt="Hero" className="w-full h-full object-cover" />
                 </div>
               </div>
 
@@ -150,13 +136,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hero-reveal opacity-0 translate-y-8 transition-all duration-700">
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs text-ink/30 dark:text-mist/30 tracking-widest uppercase font-medium">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-ink/20 to-transparent dark:from-mist/20" />
-        </div>
-      </div>
+
     </section>
   )
 }

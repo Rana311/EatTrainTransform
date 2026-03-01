@@ -9,7 +9,7 @@ const testimonials = [
     role: 'Software Engineer, Bengaluru',
     result: 'Lost 14 kg in 4 months',
     quote:
-      "I'd tried so many diets before. Gowthami ma'am was the first person who actually understood my lifestyle, my South Indian food habits, and built something I could genuinely stick to. I didn't feel deprived — I felt energetic!",
+      "I'd tried so many diets before. Gowthami ma'am was the first person who actually understood my lifestyle, my South Indian food habits, and built something I could genuinely stick to. I didn't feel deprived - I felt energetic!",
     rating: 5,
     initials: 'SR',
     color: 'bg-forest/15 dark:bg-forest/20',
@@ -19,7 +19,7 @@ const testimonials = [
     role: 'IT Professional, Kochi',
     result: 'Reversed pre-diabetes',
     quote:
-      'As someone with a desk job and erratic eating hours, I was losing hope. The plan she designed was so practical — no fancy ingredients, no gym required. My HbA1c came down in just 3 months.',
+      'As someone with a desk job and erratic eating hours, I was losing hope. The plan she designed was so practical - no fancy ingredients, no gym required. My HbA1c came down in just 3 months.',
     rating: 5,
     initials: 'AN',
     color: 'bg-gold/15 dark:bg-gold/12',
@@ -29,7 +29,7 @@ const testimonials = [
     role: 'Teacher, Chennai',
     result: 'PCOS managed naturally',
     quote:
-      'After my second delivery I was struggling with weight and hormonal issues. Gowthami didi addressed my PCOS, sleep, and nutrition together. I feel like myself again — maybe even better than before!',
+      'After my second delivery I was struggling with weight and hormonal issues. Gowthami didi addressed my PCOS, sleep, and nutrition together. I feel like myself again - maybe even better than before!',
     rating: 5,
     initials: 'MS',
     color: 'bg-forest/10 dark:bg-forest/15',
@@ -49,7 +49,7 @@ const testimonials = [
     role: 'Entrepreneur, Thrissur',
     result: 'Down 2 trouser sizes',
     quote:
-      'I travel a lot for work and thought I could never follow a diet. The travel-friendly plan she made was a game changer. No complicated rules — just smarter choices wherever I am.',
+      'I travel a lot for work and thought I could never follow a diet. The travel-friendly plan she made was a game changer. No complicated rules - just smarter choices wherever I am.',
     rating: 5,
     initials: 'RM',
     color: 'bg-forest/8 dark:bg-forest/12',
@@ -59,7 +59,7 @@ const testimonials = [
     role: 'Bank Manager, Coimbatore',
     result: 'Thyroid & weight under control',
     quote:
-      "Managing thyroid and weight together felt impossible. Gowthami ma'am's approach was patient, evidence-based, and genuinely caring. Best investment I've made in my health — I only wish I had started sooner.",
+      "Managing thyroid and weight together felt impossible. Gowthami ma'am's approach was patient, evidence-based, and genuinely caring. Best investment I've made in my health - I only wish I had started sooner.",
     rating: 5,
     initials: 'LV',
     color: 'bg-gold/12 dark:bg-gold/10',

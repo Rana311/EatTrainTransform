@@ -94,7 +94,7 @@ export default function Pricing() {
         <div className="text-center mb-16">
           <div className="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface dark:bg-night-card border border-ink/8 dark:border-mist/8 mb-6">
             <span className="text-xs font-semibold text-ink/50 dark:text-mist/50 tracking-widest uppercase">
-              Investment
+              Plans
             </span>
           </div>
           <h2 id="pricing-heading" className="reveal reveal-delay-1 font-display text-display-lg font-light text-ink dark:text-mist">
@@ -112,8 +112,8 @@ export default function Pricing() {
             <article
               key={plan.name}
               className={`reveal reveal-delay-${i + 1} relative flex flex-col rounded-4xl border ${plan.color} ${plan.border} p-8 transition-all duration-400 ${plan.popular
-                  ? 'shadow-soft-lg scale-105 z-10'
-                  : 'hover:shadow-soft hover:-translate-y-1'
+                ? 'shadow-soft-lg scale-105 z-10'
+                : 'hover:shadow-soft hover:-translate-y-1'
                 }`}
             >
               {plan.popular && (
@@ -160,8 +160,8 @@ export default function Pricing() {
               <a
                 href="#contact"
                 className={`mt-8 flex items-center justify-center px-6 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 ${plan.popular
-                    ? 'bg-white text-forest hover:bg-mist shadow-soft'
-                    : 'bg-forest text-white hover:bg-forest-dark shadow-soft hover:shadow-soft-lg'
+                  ? 'bg-white text-forest hover:bg-mist shadow-soft'
+                  : 'bg-forest text-white hover:bg-forest-dark shadow-soft hover:shadow-soft-lg'
                   }`}
               >
                 {plan.cta}

@@ -41,12 +41,11 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 bg-forest rounded-full flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-display font-semibold text-sm">E</span>
-            </div>
-            <span className="font-display text-xl font-semibold text-ink dark:text-mist tracking-tight">
-              EatTrainTransform
-            </span>
+            <img
+              src="/logo.png"
+              alt="Eat Train Transform"
+              className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 dark:invert-0 rounded-full"
+            />
           </a>
 
           {/* Desktop Links */}
@@ -55,7 +54,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-ink/70 dark:text-mist/70 hover:text-forest dark:hover:text-forest-light transition-colors duration-200 relative group"
+                  className="text-base font-medium text-ink/70 dark:text-mist/70 hover:text-forest dark:hover:text-forest-light transition-colors duration-200 relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-forest dark:bg-forest-light group-hover:w-full transition-all duration-300" />
@@ -82,9 +81,9 @@ export default function Navbar() {
             {/* CTA */}
             <a
               href="#contact"
-              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2.5 bg-forest text-white text-sm font-semibold rounded-full hover:bg-forest-dark transition-all duration-300 shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5"
+              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2.5 bg-forest text-white text-base font-semibold rounded-full hover:bg-forest-dark transition-all duration-300 shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5"
             >
-              Book a Call
+              Book Free Call
             </a>
 
             {/* Mobile Menu Toggle */}

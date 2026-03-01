@@ -53,14 +53,8 @@ export default function About() {
             <div className="relative w-full max-w-md mx-auto lg:mx-0">
               {/* Decorative background card */}
               <div className="absolute inset-0 bg-gradient-to-br from-forest/20 to-gold/15 dark:from-forest/25 dark:to-gold/15 rounded-5xl translate-x-4 translate-y-4" />
-              {/* Main image container */}
-              <div className="relative rounded-5xl overflow-hidden bg-gradient-to-br from-surface to-white dark:from-night-card dark:to-night aspect-[4/5] flex items-center justify-center shadow-soft-lg border border-ink/5 dark:border-mist/5">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 rounded-full bg-forest/15 dark:bg-forest/20 blob-1 mx-auto mb-4 animate-float" />
-                  <p className="text-ink/25 dark:text-mist/20 font-display text-sm italic">
-
-                  </p>
-                </div>
+              <div className="relative rounded-5xl overflow-hidden shadow-soft-lg aspect-[4/5]">
+                <img src="/Professional.jpeg" alt="Hero" className="absolute inset-0 w-full h-full object-cover" />
               </div>
 
               {/* Experience badge */}
@@ -87,21 +81,12 @@ export default function About() {
             </h2>
 
             <div className="reveal reveal-delay-2 space-y-4 text-ink/65 dark:text-mist/60 leading-relaxed text-sm md:text-base">
-              <p>
-                I'm a Nutritionist and Dietitian with over 10 years of experience in weight management and more than 6 years of professional experience across hospital and fitness settings.
-              </p>
-              <p>
-                My foundation is rooted in clinical nutrition, having worked in a NABH-accredited multispecialty hospital, followed by extensive experience in the fitness and wellness industry. Over the years, I've guided hundreds of individuals through sustainable weight loss, body composition improvement, and healthier lifestyle habits — always focusing on what is practical, realistic, and long-lasting.
-              </p>
-
-              <h3 className="text-base font-semibold text-ink dark:text-mist mt-5 mb-1">My Journey</h3>
-              <p>I hold a Master's degree in Dietetics and Food Service Management, with hands-on experience in hospital-based therapeutic nutrition, fitness and performance nutrition, women's wellness, and metabolic conditions. My career — from hospital wards to fitness studios and independent practice — helps me bridge clinical knowledge with everyday life.</p>
-
-              <h3 className="text-base font-semibold text-ink dark:text-mist mt-5 mb-1">What I Do</h3>
-              <p>I help clients use food as a tool to manage weight, improve metabolic health, build sustainable eating habits, and prevent lifestyle-related conditions. Every plan is personalised to your body, history, lifestyle, and goals. Nutrition should support your life — not complicate it.</p>
-
-              <h3 className="text-base font-semibold text-ink dark:text-mist mt-5 mb-1">My Approach</h3>
-              <p>I don't believe in extreme diets or temporary fixes. I focus on consistency over perfection, habits over restriction, and education over dependency — with regular follow-ups and genuine psychological support.</p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li><strong>10+ Years Experience:</strong> Weight management & clinical nutrition across hospital and fitness settings.</li>
+                <li><strong>Clinical Foundation:</strong> Experience in NABH-accredited multispecialty hospitals managing therapeutic nutrition and metabolic conditions.</li>
+                <li><strong>Food as a Tool:</strong> Personalised plans that use food to improve metabolic health and build sustainable habits.</li>
+                <li><strong>Practical & Realistic:</strong> Focus on consistency over perfection, and education over dependency—no extreme diets.</li>
+              </ul>
             </div>
 
             {/* Credentials */}
