@@ -1,70 +1,92 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { Star, Quote } from 'lucide-react'
+import { Heart, ChevronLeft, ChevronRight } from 'lucide-react'
 
-const testimonials = [
-  {
-    name: 'Sneha Ramakrishnan',
-    role: 'Software Engineer, Bengaluru',
-    result: 'Lost 14 kg in 4 months',
-    quote:
-      "I'd tried so many diets before. Gowthami ma'am was the first person who actually understood my lifestyle, my South Indian food habits, and built something I could genuinely stick to. I didn't feel deprived - I felt energetic!",
-    rating: 5,
-    initials: 'SR',
-    color: 'bg-forest/15 dark:bg-forest/20',
-  },
-  {
-    name: 'Arjun Nair',
-    role: 'IT Professional, Kochi',
-    result: 'Reversed pre-diabetes',
-    quote:
-      'As someone with a desk job and erratic eating hours, I was losing hope. The plan she designed was so practical - no fancy ingredients, no gym required. My HbA1c came down in just 3 months.',
-    rating: 5,
-    initials: 'AN',
-    color: 'bg-gold/15 dark:bg-gold/12',
-  },
-  {
-    name: 'Meera Subramaniam',
-    role: 'Teacher, Chennai',
-    result: 'PCOS managed naturally',
-    quote:
-      'After my second delivery I was struggling with weight and hormonal issues. Gowthami didi addressed my PCOS, sleep, and nutrition together. I feel like myself again - maybe even better than before!',
-    rating: 5,
-    initials: 'MS',
-    color: 'bg-forest/10 dark:bg-forest/15',
-  },
-  {
-    name: 'Divya Krishnamurthy',
-    role: 'Homemaker, Hyderabad',
-    result: 'Lost 10 kg post-pregnancy',
-    quote:
-      'I was skeptical about online coaching, but the personalised attention I received was incredible. She understood that I eat traditional Telugu food and never asked me to give it up. The results were amazing!',
-    rating: 5,
-    initials: 'DK',
-    color: 'bg-gold/10 dark:bg-gold/10',
-  },
-  {
-    name: 'Rahul Menon',
-    role: 'Entrepreneur, Thrissur',
-    result: 'Down 2 trouser sizes',
-    quote:
-      'I travel a lot for work and thought I could never follow a diet. The travel-friendly plan she made was a game changer. No complicated rules - just smarter choices wherever I am.',
-    rating: 5,
-    initials: 'RM',
-    color: 'bg-forest/8 dark:bg-forest/12',
-  },
-  {
-    name: 'Lakshmi Venkatesh',
-    role: 'Bank Manager, Coimbatore',
-    result: 'Thyroid & weight under control',
-    quote:
-      "Managing thyroid and weight together felt impossible. Gowthami ma'am's approach was patient, evidence-based, and genuinely caring. Best investment I've made in my health - I only wish I had started sooner.",
-    rating: 5,
-    initials: 'LV',
-    color: 'bg-gold/12 dark:bg-gold/10',
-  },
-]
+import Image from 'next/image'
+
+import t8 from '../public/Testimonial_8.jpeg'
+import t2 from '../public/Testimonial_2.jpeg'
+import t14 from '../public/Testimonial_14.jpeg'
+import t1 from '../public/Testimonial_1.jpeg'
+import t4 from '../public/Testimonial_4.jpeg'
+import t10 from '../public/Testimonial_10.jpeg'
+import t12 from '../public/Testimonial_12.jpeg'
+
+import t9 from '../public/Testimonial_9.jpeg'
+import t3 from '../public/Testimonial_3.jpeg'
+import t6 from '../public/Testimonial_6.jpeg'
+import t7 from '../public/Testimonial_7.jpeg'
+import t5 from '../public/Testimonial_5.jpeg'
+import t11 from '../public/Testimonial_11.jpeg'
+import t13 from '../public/Testimonial_13.jpeg'
+
+// Shorter testimonials (heights < 1020px)
+const row1Images = [t8, t2, t14, t1, t4, t10, t12]
+
+// Taller testimonials (heights > 1020px)
+const row2Images = [t9, t3, t6, t7, t5, t11, t13]
+
+const CarouselRow = ({ images, rowIdx, delayClass }: { images: any[], rowIdx: number, delayClass: string }) => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = window.innerWidth < 640 ? window.innerWidth * 0.8 : 400
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' })
+    }
+  }
+
+  return (
+    <div className={`relative group ${delayClass} reveal`}>
+      {/* Scroll Left Button */}
+      <button 
+        onClick={() => scroll('left')}
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 dark:bg-night-card/90 backdrop-blur-sm shadow-soft-lg rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hover:bg-forest hover:text-white dark:hover:bg-forest-light dark:hover:text-forest-dark border border-ink/5 dark:border-mist/5 disabled:opacity-0 focus:opacity-100 text-ink dark:text-mist"
+        aria-label="Scroll left"
+      >
+        <ChevronLeft size={24} />
+      </button>
+
+      {/* Fade Masks */}
+      <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-surface dark:from-night-surface to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-surface dark:from-night-surface to-transparent z-10 pointer-events-none" />
+
+      {/* Scrollable Container */}
+      <div 
+        ref={scrollRef}
+        className="flex overflow-x-auto gap-4 sm:gap-8 pb-8 pt-4 snap-x snap-mandatory hide-scrollbar px-6 sm:px-16"
+      >
+        {images.map((src, i) => (
+          <div
+            key={src.src}
+            className="relative flex-none w-[75vw] sm:w-[320px] lg:w-[380px] snap-center rounded-[2rem] overflow-hidden shadow-soft-md border border-ink/5 dark:border-mist/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-soft-xl bg-white dark:bg-night-card group/card"
+          >
+            <Image
+              src={src}
+              alt={`Client Testimony ${i + 1} (Row ${rowIdx})`}
+              className="w-full h-auto object-cover transition-transform duration-700 group-hover/card:scale-105"
+              sizes="(max-width: 640px) 75vw, (max-width: 1024px) 320px, 380px"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/5 dark:group-hover/card:bg-white/5 transition-colors duration-300 pointer-events-none" />
+            
+            {/* Subtle inner border for premium feel */}
+            <div className="absolute inset-0 rounded-[2rem] border border-ink/5 dark:border-mist/5 pointer-events-none" />
+          </div>
+        ))}
+      </div>
+      
+      {/* Scroll Right Button */}
+      <button 
+        onClick={() => scroll('right')}
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 dark:bg-night-card/90 backdrop-blur-sm shadow-soft-lg rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hover:bg-forest hover:text-white dark:hover:bg-forest-light dark:hover:text-forest-dark border border-ink/5 dark:border-mist/5 disabled:opacity-0 focus:opacity-100 text-ink dark:text-mist"
+        aria-label="Scroll right"
+      >
+        <ChevronRight size={24} />
+      </button>
+    </div>
+  )
+}
 
 export default function Testimonials() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -97,67 +119,50 @@ export default function Testimonials() {
         <div className="absolute bottom-1/4 right-0 w-64 h-64 blob-2 bg-gold/5 translate-x-1/2" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-night-card border border-ink/8 dark:border-mist/8 mb-6">
-            <span className="text-xs font-semibold text-ink/50 dark:text-mist/50 tracking-widest uppercase">
-              Success Stories
+      <div className="max-w-[1400px] mx-auto px-0 relative z-10">
+        {/* Header (contained within typical max-width wrapper) */}
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center mb-16">
+          <div className="reveal inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-forest/5 dark:bg-forest-light/5 border border-forest/20 dark:border-forest-light/20 shadow-sm mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-forest dark:bg-forest-light" />
+            <span className="text-sm font-bold text-forest dark:text-forest-light tracking-widest uppercase pt-0.5">
+              Testimonials
             </span>
           </div>
-          <h2 id="testimonials-heading" className="reveal reveal-delay-1 font-display text-display-lg font-light text-ink dark:text-mist">
-            Real People.{' '}
-            <em className="text-forest dark:text-forest-light">Real Results.</em>
+          <h2 id="testimonials-heading" className="reveal reveal-delay-1 font-display text-display-lg md:text-display-xl font-light text-ink dark:text-mist">
+            Real Conversations.{' '}
+            <em className="text-forest dark:text-forest-light font-medium italic">Real Results.</em>
           </h2>
-          <div className="reveal reveal-delay-2 flex items-center justify-center gap-1.5 mt-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={16} className="fill-gold text-gold" />
-            ))}
-            <span className="ml-2 text-sm text-ink/50 dark:text-mist/50">4.9 average from 200+ reviews</span>
-          </div>
+          <p className="reveal reveal-delay-2 mt-4 text-ink/60 dark:text-mist/60 text-base md:text-lg max-w-2xl mx-auto font-light">
+            Discover the journeys of those who transformed their bodies and lives through personalized nutrition.
+          </p>
         </div>
 
-        {/* Masonry-style grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {testimonials.map((t, i) => (
-            <article
-              key={t.name}
-              className={`reveal reveal-delay-${(i % 4) + 1} break-inside-avoid group bg-white dark:bg-night-card rounded-4xl p-6 border border-ink/5 dark:border-mist/5 hover:border-forest/20 dark:hover:border-forest/20 transition-all duration-400 hover:shadow-soft`}
-            >
-              {/* Quote icon */}
-              <Quote size={20} className="text-forest/20 dark:text-forest/25 mb-4" />
+        {/* Scrollable Container 1 (Shorter Images) */}
+        <CarouselRow images={row1Images} rowIdx={1} delayClass="reveal-delay-3" />
 
-              {/* Stars */}
-              <div className="flex gap-1 mb-3">
-                {[...Array(t.rating)].map((_, j) => (
-                  <Star key={j} size={12} className="fill-gold text-gold" />
-                ))}
-              </div>
+        {/* Scrollable Container 2 (Taller Images) */}
+        <div className="mt-4">
+          <CarouselRow images={row2Images} rowIdx={2} delayClass="reveal-delay-4" />
+        </div>
 
-              {/* Result badge */}
-              <span className={`inline-block px-3 py-1 ${t.color} text-forest dark:text-forest-light text-xs font-semibold rounded-full mb-3`}>
-                {t.result}
-              </span>
-
-              {/* Quote */}
-              <blockquote className="text-ink/70 dark:text-mist/65 text-sm leading-relaxed mb-5 font-light italic">
-                "{t.quote}"
-              </blockquote>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className={`w-9 h-9 rounded-full ${t.color} flex items-center justify-center`}>
-                  <span className="text-forest dark:text-forest-light text-xs font-bold">{t.initials}</span>
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-ink dark:text-mist">{t.name}</div>
-                  <div className="text-xs text-ink/45 dark:text-mist/45">{t.role}</div>
-                </div>
-              </div>
-            </article>
-          ))}
+        {/* Helper text for small screens indicating scrolling */}
+        <div className="text-center mt-6 lg:hidden reveal reveal-delay-5 flex items-center justify-center gap-2 text-xs font-medium text-ink/40 dark:text-mist/40">
+          <ChevronLeft size={14} /> Swiping enabled <ChevronRight size={14} />
         </div>
       </div>
+
+      {/* Hide Scrollbar CSS styling specific to this component */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .hide-scrollbar {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none; /* Chrome, Safari and Opera */
+        }
+      `}} />
     </section>
   )
 }
+

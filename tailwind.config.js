@@ -20,6 +20,11 @@ module.exports = {
           light: '#E0C896',
           dark: '#A88A50',
         },
+        blue: {
+          DEFAULT: '#2563EB',
+          light: '#60A5FA',
+          dark: '#1D4ED8',
+        },
         ink: {
           DEFAULT: '#1A1C18',
           muted: '#68706A',

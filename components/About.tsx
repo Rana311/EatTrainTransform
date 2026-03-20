@@ -67,17 +67,18 @@ export default function About() {
 
           {/* Right — Story */}
           <div>
-            <div className="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-night-card border border-ink/8 dark:border-mist/8 mb-6">
-              <span className="text-xs font-semibold text-ink/50 dark:text-mist/50 tracking-widest uppercase">
-                About Me
-              </span>
-            </div>
+            <div className="reveal inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-forest/5 dark:bg-forest-light/5 border border-forest/20 dark:border-forest-light/20 shadow-sm mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-forest dark:bg-forest-light" />
+            <span className="text-sm font-bold text-forest dark:text-forest-light tracking-widest uppercase pt-0.5">
+              About Me
+            </span>
+          </div>
 
             <h2
               id="about-heading"
-              className="reveal reveal-delay-1 font-display text-display-md font-light text-ink dark:text-mist mb-6"
+              className="reveal reveal-delay-1 font-display text-display-lg font-light text-ink dark:text-mist mb-6"
             >
-              Hi, I'm <em className="text-forest dark:text-forest-light">Gowthami sukumaran</em>
+              Hi, I'm <em className="text-blue dark:text-blue-light">Gowthami sukumaran</em>
             </h2>
 
             <div className="reveal reveal-delay-2 space-y-4 text-ink/65 dark:text-mist/60 leading-relaxed text-sm md:text-base">

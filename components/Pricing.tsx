@@ -89,17 +89,18 @@ export default function Pricing() {
       className="py-24 lg:py-32 relative"
       aria-labelledby="pricing-heading"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface dark:bg-night-card border border-ink/8 dark:border-mist/8 mb-6">
-            <span className="text-xs font-semibold text-ink/50 dark:text-mist/50 tracking-widest uppercase">
+          <div className="reveal inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-forest/5 dark:bg-forest-light/5 border border-forest/20 dark:border-forest-light/20 shadow-sm mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-forest dark:bg-forest-light" />
+            <span className="text-sm font-bold text-forest dark:text-forest-light tracking-widest uppercase pt-0.5">
               Plans
             </span>
           </div>
-          <h2 id="pricing-heading" className="reveal reveal-delay-1 font-display text-display-lg font-light text-ink dark:text-mist">
+          <h2 id="pricing-heading" className="reveal reveal-delay-1 font-display text-display-xl font-light text-ink dark:text-mist">
             Simple, Transparent{' '}
-            <em className="text-forest dark:text-forest-light">Pricing</em>
+            <em className="text-blue dark:text-blue-light">Pricing</em>
           </h2>
           <p className="reveal reveal-delay-2 mt-4 text-lg text-ink/55 dark:text-mist/55 max-w-lg mx-auto">
             No hidden fees, no long contracts. Cancel any time. Start with what fits your life.
@@ -111,8 +112,8 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <article
               key={plan.name}
-              className={`reveal reveal-delay-${i + 1} relative flex flex-col rounded-4xl border ${plan.color} ${plan.border} p-8 transition-all duration-400 ${plan.popular
-                ? 'shadow-soft-lg scale-105 z-10'
+              className={`reveal reveal-delay-${i + 1} relative flex flex-col rounded-4xl border ${plan.color} ${plan.border} p-6 md:p-8 transition-all duration-400 ${plan.popular
+                ? 'shadow-soft-lg md:scale-105 z-10'
                 : 'hover:shadow-soft hover:-translate-y-1'
                 }`}
             >

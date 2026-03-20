@@ -71,17 +71,18 @@ export default function Services() {
       className="py-24 lg:py-32 relative"
       aria-labelledby="services-heading"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface dark:bg-night-card border border-ink/8 dark:border-mist/8 mb-6">
-            <span className="text-xs font-semibold text-ink/50 dark:text-mist/50 tracking-widest uppercase">
+          <div className="reveal inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-forest/5 dark:bg-forest-light/5 border border-forest/20 dark:border-forest-light/20 shadow-sm mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-forest dark:bg-forest-light" />
+            <span className="text-sm font-bold text-forest dark:text-forest-light tracking-widest uppercase pt-0.5">
               What I Offer
             </span>
           </div>
-          <h2 id="services-heading" className="reveal reveal-delay-1 font-display text-display-lg font-light text-ink dark:text-mist">
+          <h2 id="services-heading" className="reveal reveal-delay-1 font-display text-display-xl font-light text-ink dark:text-mist">
             Services Designed for{' '}
-            <em className="text-forest dark:text-forest-light">Real Results</em>
+            <em className="text-blue dark:text-blue-light">Real Results</em>
           </h2>
           <p className="reveal reveal-delay-2 mt-4 text-lg text-ink/55 dark:text-mist/55 max-w-xl mx-auto leading-relaxed">
             No cookie-cutter programs. Every service is tailored to you - your body, your schedule, your goals.

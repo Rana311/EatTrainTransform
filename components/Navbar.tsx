@@ -22,7 +22,7 @@ export default function Navbar() {
   useEffect(() => {
     setMounted(true)
     const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -38,7 +38,7 @@ export default function Navbar() {
             : 'py-5 bg-transparent'
         )}
       >
-        <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+        <nav className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
             <img

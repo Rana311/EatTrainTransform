@@ -33,7 +33,7 @@ export default function Footer() {
               {[
                 { icon: Instagram, href: '#', label: 'Instagram' },
                 { icon: Mail, href: 'mailto:gowthami@eattraintransform.in', label: 'Email' },
-                { icon: MessageCircle, href: '#', label: 'WhatsApp' },
+                { icon: MessageCircle, href: 'https://wa.me/919487320963?text=Hello Gowthami! %20I%20want%20to%20book%20a%20consultation', label: 'WhatsApp' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
