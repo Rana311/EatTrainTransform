@@ -48,27 +48,27 @@ export default function Hero() {
               </div>
 
               {/* Floating cards */}
-              <div className="absolute -left-2 sm:-left-8 top-12 animate-float" style={{ animationDelay: '1s' }}>
-                <div className="bg-white dark:bg-night-card shadow-card dark:shadow-card-dark rounded-2xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-2.5 border border-ink/5 dark:border-mist/5">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gold/20 flex items-center justify-center">
+              <div className="hidden sm:block absolute -left-1 sm:-left-8 -top-20 sm:top-12 animate-float" style={{ animationDelay: '1s' }}>
+                <div className="bg-white dark:bg-night-card shadow-card dark:shadow-card-dark rounded-xl sm:rounded-2xl px-2 py-1.5 sm:px-4 sm:py-3 flex items-center gap-1.5 sm:gap-2.5 border border-ink/5 dark:border-mist/5">
+                  <div className="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
                     <span className="text-gold text-xs sm:text-sm">🥗</span>
                   </div>
-                  <div>
-                    <div className="text-xs font-bold text-ink dark:text-mist">Nutrition Plan</div>
-                    <div className="text-xs text-ink/50 dark:text-mist/50">100% personalized</div>
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-xs font-bold text-ink dark:text-mist truncate">Nutrition Plan</div>
+                    <div className="text-xs text-ink/50 dark:text-mist/50 truncate">100% personalized</div>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute -right-2 sm:-right-6 bottom-12 sm:bottom-16 animate-float-delayed">
-                <div className="bg-white dark:bg-night-card shadow-card dark:shadow-card-dark rounded-2xl px-3 py-2.5 sm:px-4 sm:py-3 border border-ink/5 dark:border-mist/5">
-                  <div className="flex items-center gap-1 mb-1">
+              <div className="hidden sm:block absolute -right-1 sm:-right-6 bottom-36 sm:bottom-16 animate-float-delayed">
+                <div className="bg-white dark:bg-night-card shadow-card dark:shadow-card-dark rounded-xl sm:rounded-2xl px-2 py-1.5 sm:px-4 sm:py-3 border border-ink/5 dark:border-mist/5">
+                  <div className="flex items-center gap-0.5 sm:gap-1 mb-0.5 sm:mb-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={9} className="fill-gold text-gold" />
+                      <Star key={i} size={7} className="fill-gold text-gold sm:size-auto" />
                     ))}
                   </div>
-                  <div className="text-xs font-bold text-ink dark:text-mist">"Lost 10 kg post-pregnancy"</div>
-                  <div className="text-xs text-ink/50 dark:text-mist/50 mt-0.5">— Divya K., Hyderabad</div>
+                  <div className="text-xs sm:text-xs font-bold text-ink dark:text-mist line-clamp-1 sm:line-clamp-none">"Lost 10 kg post-pregnancy"</div>
+                  <div className="text-xs text-ink/50 dark:text-mist/50 mt-0.5 line-clamp-1 sm:line-clamp-none">— Divya K., Hyderabad</div>
                 </div>
               </div>
             </div>
