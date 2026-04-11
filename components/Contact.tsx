@@ -110,7 +110,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left — Info */}
           <div className="lg:col-span-2 reveal">
             <div className="space-y-6">
@@ -177,7 +177,7 @@ export default function Contact() {
 
           {/* Right — Form */}
           <div className="lg:col-span-3 reveal reveal-delay-2">
-            <div className="bg-white dark:bg-night-card rounded-4xl p-8 border border-ink/6 dark:border-mist/5 shadow-card dark:shadow-card-dark">
+            <div className="bg-white dark:bg-night-card rounded-4xl p-5 sm:p-6 md:p-8 border border-ink/6 dark:border-mist/5 shadow-card dark:shadow-card-dark">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <div className="w-16 h-16 rounded-full bg-forest/15 flex items-center justify-center mb-4">

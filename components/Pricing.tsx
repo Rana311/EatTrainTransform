@@ -112,8 +112,8 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <article
               key={plan.name}
-              className={`reveal reveal-delay-${i + 1} relative flex flex-col rounded-4xl border ${plan.color} ${plan.border} p-6 md:p-8 transition-all duration-400 ${plan.popular
-                ? 'shadow-soft-lg md:scale-105 z-10'
+              className={`reveal reveal-delay-${i + 1} relative flex flex-col rounded-4xl border ${plan.color} ${plan.border} p-5 sm:p-6 md:p-8 transition-all duration-400 ${plan.popular
+                ? 'shadow-soft-lg lg:scale-105 z-10'
                 : 'hover:shadow-soft hover:-translate-y-1'
                 }`}
             >

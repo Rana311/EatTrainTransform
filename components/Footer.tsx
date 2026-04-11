@@ -14,7 +14,7 @@ export default function Footer() {
       {/* Top accent line */}
       <div className="h-px bg-gradient-to-r from-transparent via-forest to-transparent opacity-40" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>

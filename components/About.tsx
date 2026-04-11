@@ -45,8 +45,8 @@ export default function About() {
       <div className="absolute top-0 right-0 w-72 h-72 blob-1 bg-forest/5 dark:bg-forest/8 translate-x-1/2 -translate-y-1/4 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-56 h-56 blob-2 bg-gold/6 dark:bg-gold/6 -translate-x-1/3 translate-y-1/4 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
 
           {/* Left — Photo placeholder */}
           <div className="reveal relative">
@@ -58,7 +58,7 @@ export default function About() {
               </div>
 
               {/* Experience badge */}
-              <div className="absolute -bottom-5 -right-5 bg-forest text-white rounded-3xl px-6 py-4 shadow-soft-lg">
+              <div className="absolute -bottom-4 -right-2 sm:-bottom-5 sm:-right-5 bg-forest text-white rounded-3xl px-4 sm:px-6 py-3 sm:py-4 shadow-soft-lg">
                 <div className="font-display text-3xl font-semibold leading-none">10+</div>
                 <div className="text-xs text-white/70 mt-1">Years of<br />Experience</div>
               </div>
@@ -101,7 +101,7 @@ export default function About() {
             </ul>
 
             {/* Stats row */}
-            <div className="reveal reveal-delay-4 flex gap-8 mt-10 pt-8 border-t border-ink/8 dark:border-mist/8">
+            <div className="reveal reveal-delay-4 flex gap-4 sm:gap-8 mt-10 pt-8 border-t border-ink/8 dark:border-mist/8">
               {achievements.map(({ value, label }) => (
                 <div key={label}>
                   <div className="font-display text-3xl font-semibold text-forest dark:text-forest-light leading-none">

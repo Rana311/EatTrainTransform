@@ -96,7 +96,7 @@ export default function Services() {
             return (
               <article
                 key={service.title}
-                className={`reveal reveal-delay-${i + 1} group relative p-8 rounded-4xl bg-white dark:bg-night-card border border-ink/6 dark:border-mist/5 hover:border-forest/30 dark:hover:border-forest/30 transition-all duration-400 hover:shadow-soft-lg hover:-translate-y-1 overflow-hidden`}
+                className={`reveal reveal-delay-${i + 1} group relative p-5 sm:p-6 md:p-8 rounded-4xl bg-white dark:bg-night-card border border-ink/6 dark:border-mist/5 hover:border-forest/30 dark:hover:border-forest/30 transition-all duration-400 hover:shadow-soft-lg hover:-translate-y-1 overflow-hidden`}
               >
                 {/* BG gradient on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-400`} />

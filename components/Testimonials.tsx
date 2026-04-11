@@ -55,12 +55,12 @@ const CarouselRow = ({ images, rowIdx, delayClass }: { images: any[], rowIdx: nu
       {/* Scrollable Container */}
       <div 
         ref={scrollRef}
-        className="flex overflow-x-auto gap-4 sm:gap-8 pb-8 pt-4 snap-x snap-mandatory hide-scrollbar px-6 sm:px-16"
+        className="flex overflow-x-auto gap-4 sm:gap-6 pb-8 pt-4 snap-x snap-mandatory hide-scrollbar px-4 sm:px-8"
       >
         {images.map((src, i) => (
           <div
             key={src.src}
-            className="relative flex-none w-[75vw] sm:w-[320px] lg:w-[380px] snap-center rounded-[2rem] overflow-hidden shadow-soft-md border border-ink/5 dark:border-mist/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-soft-xl bg-white dark:bg-night-card group/card"
+            className="relative flex-none w-[80vw] sm:w-[300px] lg:w-[360px] snap-center rounded-[2rem] overflow-hidden shadow-soft-md border border-ink/5 dark:border-mist/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-soft-xl bg-white dark:bg-night-card group/card"
           >
             <Image
               src={src}

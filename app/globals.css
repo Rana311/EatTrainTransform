@@ -71,7 +71,7 @@
     border-radius: 50% 60% 40% 70% / 70% 40% 60% 30%;
   }
 
-  /* Reveal animations */
+  /* Scroll-triggered reveal animations */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -88,6 +88,22 @@
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
   .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* Hero CSS animations — reliable on all devices, no JS needed */
+  @keyframes heroFadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-reveal {
+    animation: heroFadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
 
   /* Gradient mesh background */
   .mesh-bg {
