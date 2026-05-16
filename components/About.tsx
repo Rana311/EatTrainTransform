@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { CheckCircle2 } from 'lucide-react'
 
 const credentials = [
@@ -54,7 +55,7 @@ export default function About() {
               {/* Decorative background card */}
               <div className="absolute inset-0 bg-gradient-to-br from-forest/20 to-gold/15 dark:from-forest/25 dark:to-gold/15 rounded-5xl translate-x-4 translate-y-4" />
               <div className="relative rounded-5xl overflow-hidden shadow-soft-lg aspect-[4/5]">
-                <img src="/Professional.jpeg" alt="Hero" className="absolute inset-0 w-full h-full object-cover" />
+                <Image src="/Professional.jpeg" alt="Gowthami Sukumaran" fill loading="lazy" className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
 
               {/* Experience badge */}

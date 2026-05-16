@@ -5,6 +5,7 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -21,7 +22,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-4">
               <img
                 src="/logo.png"
-                alt="Eat Train Transform"
+                alt="Fitudal"
                 className="h-10 w-auto object-contain rounded-full"
               />
             </div>
@@ -82,7 +83,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-mist/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-mist/25">
-            © {new Date().getFullYear()} EatTrainTransform. All rights reserved.
+            © {new Date().getFullYear()} Fitudal. All rights reserved.
           </p>
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Service'].map((item) => (

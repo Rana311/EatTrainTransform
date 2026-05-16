@@ -10,6 +10,7 @@ const links = [
   { label: 'About', href: '#about' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -43,7 +44,7 @@ export default function Navbar() {
           <a href="#" className="flex items-center gap-2.5 group">
             <img
               src="/logo.png"
-              alt="Eat Train Transform"
+              alt="Fitudal"
               className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 dark:invert-0 rounded-full"
             />
           </a>

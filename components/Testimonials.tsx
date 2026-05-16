@@ -1,33 +1,17 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { Heart, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import Image from 'next/image'
 
-import t8 from '../public/Testimonial_8.jpeg'
-import t2 from '../public/Testimonial_2.jpeg'
-import t14 from '../public/Testimonial_14.jpeg'
-import t1 from '../public/Testimonial_1.jpeg'
-import t4 from '../public/Testimonial_4.jpeg'
-import t10 from '../public/Testimonial_10.jpeg'
-import t12 from '../public/Testimonial_12.jpeg'
+// Shorter testimonials — swap for optimised WebP files when ready
+const row1Images: string[] = []
 
-import t9 from '../public/Testimonial_9.jpeg'
-import t3 from '../public/Testimonial_3.jpeg'
-import t6 from '../public/Testimonial_6.jpeg'
-import t7 from '../public/Testimonial_7.jpeg'
-import t5 from '../public/Testimonial_5.jpeg'
-import t11 from '../public/Testimonial_11.jpeg'
-import t13 from '../public/Testimonial_13.jpeg'
+// Taller testimonials — swap for optimised WebP files when ready
+const row2Images: string[] = []
 
-// Shorter testimonials (heights < 1020px)
-const row1Images = [t8, t2, t14, t1, t4, t10, t12]
-
-// Taller testimonials (heights > 1020px)
-const row2Images = [t9, t3, t6, t7, t5, t11, t13]
-
-const CarouselRow = ({ images, rowIdx, delayClass }: { images: any[], rowIdx: number, delayClass: string }) => {
+const CarouselRow = ({ images, rowIdx, delayClass }: { images: string[], rowIdx: number, delayClass: string }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const scroll = (direction: 'left' | 'right') => {
@@ -59,12 +43,15 @@ const CarouselRow = ({ images, rowIdx, delayClass }: { images: any[], rowIdx: nu
       >
         {images.map((src, i) => (
           <div
-            key={src.src}
+            key={src}
             className="relative flex-none w-[80vw] sm:w-[300px] lg:w-[360px] snap-center rounded-[2rem] overflow-hidden shadow-soft-md border border-ink/5 dark:border-mist/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-soft-xl bg-white dark:bg-night-card group/card"
           >
             <Image
               src={src}
               alt={`Client Testimony ${i + 1} (Row ${rowIdx})`}
+              width={400}
+              height={600}
+              loading="lazy"
               className="w-full h-auto object-cover transition-transform duration-700 group-hover/card:scale-105"
               sizes="(max-width: 640px) 75vw, (max-width: 1024px) 320px, 380px"
             />

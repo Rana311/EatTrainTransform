@@ -38,7 +38,7 @@ export default function Hero() {
                 <div className="relative w-full h-full rounded-5xl overflow-hidden shadow-soft-lg">
                   <Image
                     src="/gowthami_hero_updated.jpeg"
-                    alt="Hero"
+                    alt="Gowthami Sukumaran, certified dietitian and nutrition coach"
                     fill
                     priority
                     className="object-cover"

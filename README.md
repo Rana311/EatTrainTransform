@@ -1,4 +1,4 @@
-# EatTrainTransform — Nutritionist & Trainer Website
+# Fitudal — Nutritionist & Trainer Website
 
 A production-grade Next.js 14 static site with:
 - ✅ App Router + TypeScript
